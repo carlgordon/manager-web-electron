@@ -12,15 +12,16 @@ let mainWindow,
     width: 1366,
     height: 768,
     show: false,
-    icon: path.join(__dirname, 'assets/icons/png/64x64.png'),
     webPreferences: {
-      nodeIntegration: true,
+      nodeIntegration: false,
       plugins: true
     }
   };
 
 contextMenu({
   prepend: (defaultActions, params, browserWindow) => [{
+    label: 'Actions',
+    visible: params.mediaType === 'image',
     showSaveImageAs: true
   }]
 });
@@ -29,6 +30,8 @@ function createWindow () {
   // Create the browser window.
 
   mainWindow = new BrowserWindow(windowParams);
+
+  // mainWindow.webContents.openDevTools();
 
   // and load of the app.
   mainWindow.loadURL('https://managerwebqa.mdapropsys.com/');
