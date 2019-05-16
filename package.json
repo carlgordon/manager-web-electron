@@ -1,0 +1,44 @@
+{
+  "name": "mdapropertymanager",
+  "productName": "MDA Property Manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "npm install && electron ./app",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "mdapropertymanager",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
+  },
+  "author": "MDA Property",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^5.0.0",
+    "electron-builder": "^20.40.2"
+  },
+  "dependencies": {
+    "electron-context-menu": "^0.12.1",
+    "electron-dl": "^1.14.0"
+  }
+}
