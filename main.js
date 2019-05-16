@@ -10,7 +10,7 @@ let mainWindow,
   loadingScreen,
   windowParams = {
     width: 1366,
-    height: 768,
+    height: 780,
     show: false,
     webPreferences: {
       nodeIntegration: false,
@@ -31,8 +31,6 @@ function createWindow () {
 
   mainWindow = new BrowserWindow(windowParams);
 
-  // mainWindow.webContents.openDevTools();
-
   // and load of the app.
   mainWindow.loadURL('https://managerwebqa.mdapropsys.com/');
 
@@ -44,11 +42,10 @@ function createWindow () {
         mainWindow.setBounds(loadingScreenBounds);
         loadingScreen.close();
       }
-    }, 4000);
+    }, 3000);
   });
 
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -88,7 +85,6 @@ app.on('activate', function () {
   // dock icon is clicked and there are no other windows open.
   if (mainWindow === null) createWindow()
 })
+
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-
-
