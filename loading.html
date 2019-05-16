@@ -79,17 +79,9 @@ body {
 @-webkit-keyframes fade-in {
 	0% {
 		opacity: 0;
-		-webkit-transform: scale(1.5);
-		transform: scale(1.5);
-		-webkit-filter: blur(2px);
-		filter: blur(2px);
 	}
 	100% {
 		opacity: 1;
-			-webkit-transform: scale(1.5);
-		transform: scale(1.5);
-		-webkit-filter: blur(2px);
-		filter: blur(2px);
 	}
 }
 @keyframes fade-in {
@@ -110,58 +102,22 @@ body {
 	}
 }
 
-@-webkit-keyframes puff-in-center {
-	0% {
-		-webkit-transform: scale(2);
-		transform: scale(2);
-		-webkit-filter: blur(2px);
-		filter: blur(2px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		-webkit-filter: blur(0px);
-		filter: blur(0px);
-		opacity: 1;
-	}
-}
-@keyframes puff-in-center {
-	0% {
-		-webkit-transform: scale(2);
-		transform: scale(2);
-		-webkit-filter: blur(2px);
-		filter: blur(2px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		-webkit-filter: blur(0px);
-		filter: blur(0px);
-		opacity: 1;
-	}
-}
 </style>
   </head>
   <body>
     <div class="wrapper">
 			<div class="logo">
-		<img src="images/outline_animated.svg" class="logo-outline">
-		<img src="images/logo.svg" class="logo-colors">
-		</div>
-    <div class="lds-ring-wrapper fade-in">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+				<img src="images/outline_animated.svg" class="logo-outline">
+				<img src="images/logo.svg" class="logo-colors">
+			</div>
+			<div class="lds-ring-wrapper fade-in">
+			<div class="lds-ring">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
   </div>
   </div>
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
   </body>
 </html>
