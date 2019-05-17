@@ -118,7 +118,7 @@ let mainWindow,
 contextMenu({
   prepend: (defaultActions, params, browserWindow) => [{
     label: 'Actions',
-    visible: params.mediaType === 'image',
+    visible: false,
     showSaveImageAs: true
   }]
 });
